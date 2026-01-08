@@ -16,10 +16,11 @@ The purpose of this repo is to showcase how both kagent and agentgateway work at
 1. Set env variables
 
 ```
-export SOLO_LICENSE_KEY=<key>
+export SOLO_ISTIO_LICENSE_KEY=<key>
 export GLOO_GATEWAY_LICENSE_KEY=<key>
 export AGENTGATEWAY_LICENSE_KEY=<key>
 export OPENAI_API_KEY=
+export CLUSTER1_NAME=cluster-1
 ```
 
 2. create the `kagent` Namespace
@@ -75,7 +76,7 @@ manager:
     WATCH_NAMESPACES: "kagent"
     GLOO_GATEWAY_LICENSE_KEY: ${GLOO_GATEWAY_LICENSE_KEY}
     AGENTGATEWAY_LICENSE_KEY: ${AGENTGATEWAY_LICENSE_KEY}
-    SOLO_ISTIO_LICENSE_KEY: ${SOLO_LICENSE_KEY}
+    SOLO_ISTIO_LICENSE_KEY: ${SOLO_ISTIO_LICENSE_KEY}
 EOF
 ```
 
